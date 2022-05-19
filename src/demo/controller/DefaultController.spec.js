@@ -25,11 +25,10 @@ describe('Demo_Default_Controller', () => {
                 expect(res.status).toBe(400);
                 done();
             });
-        done();
     });
 
     it('getPallets', (done) => {
-        
+        done();
     });
 });
 
