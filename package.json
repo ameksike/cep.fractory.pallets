@@ -1,18 +1,12 @@
 {
-  "name": "ksmf-skeleton-rest",
+  "name": "fractory-pallets",
   "version": "1.0.0",
-  "description": "KsMf REST API Skeleton",
+  "description": "REST API demo",
   "main": "./bin/server.js",
   "scripts": {
     "start": "node ./bin/server.js",
     "dev": "nodemon ./bin/server.js",
-    "test": "jest",
-    "db:migrate": "npx sequelize-cli db:migrate",
-    "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
-    "db:migrate:status": "npx sequelize-cli db:migrate:status",
-    "db:migrate:generate": "npx sequelize-cli migration:generate --name",
-    "db:migration:generate": "npx sequelize-cli migration:generate --name",
-    "heroku-postbuild": "node_modules/.bin/sequelize db:migrate"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
