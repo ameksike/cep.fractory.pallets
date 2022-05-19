@@ -12,13 +12,17 @@ const header = { 'Authorization': 'Bearer ' };
 
 describe('Demo_Default_Controller', () => {
 
-    it('pallets', (done) => {
+    it('pallets with bad request', (done) => {
         req
-            .get(baseUrl + '/reasons/test1')
+            .post(baseUrl + '/pallets')
+            .send({
+                parts: [
+                    {width:100, height: 20},
+                    {width:900, height: 450}
+                ]
+            })
             .end((error, res) => {
-                expect(res.status).toBe(200);
-                expect(res.body).toBeInstanceOf(Object);
-                expect(typeof(res.body.message) ).toBe('string');
+                expect(res.status).toBe(400);
                 done();
             });
         done();
@@ -27,6 +31,5 @@ describe('Demo_Default_Controller', () => {
     it('getPallets', (done) => {
         
     });
-
 });
 
