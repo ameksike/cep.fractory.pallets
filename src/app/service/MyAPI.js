@@ -12,7 +12,7 @@ class MyAPI {
 
     constructor() {
         this.token = '';
-        this.base = process.env.MyAPI_URL;
+        this.base = process.env.MyAPI_URL || 'https://reqres.in';
     }
 
     /**
